@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SD Softech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- HEADER -->
+    <header class="bg-black border-b border-gray-800">
+        <nav class="flex justify-between items-center p-4 max-w-7xl mx-auto">
+            <div>
+                <img src="image/logo.png" class="h-12">
+            </div>
+            <ul class="flex gap-8 text-lg">
+                <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+                <li><a href="#services" class="hover:text-red-500">Services</a></li>
+                <li><a href="our_team.html" class="hover:text-red-500">Our Team</a></li>
+                <li><a href="#contact" class="hover:text-red-500">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="flex items-center justify-center h-screen text-center px-6">
+        <div>
+            <h1 class="text-5xl font-bold mb-6">
+                Welcome to SD Softech
+            </h1>
+            <p class="text-gray-400 text-lg max-w-xl mx-auto">
+                We provide School ERP, Website Development, SMS Services,
+                Hospital Automation and many more IT solutions.
+            </p>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Our Services
+            </h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-black p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">School ERP</h3>
+                    <p class="text-gray-400">Complete school management software solution.</p>
+                </div>
+                <div class="bg-black p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Website Development</h3>
+                    <p class="text-gray-400">Professional websites for businesses and schools.</p>
+                </div>
+                <div class="bg-black p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">SMS Service</h3>
+                    <p class="text-gray-400">Bulk SMS solution for schools and organizations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="max-w-xl mx-auto bg-white text-black p-8 rounded-xl shadow-xl">
+            <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
+            <form action="https://formsubmit.co/sujeetdandotiya@gmail.com" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Your Name" class="w-full border p-3 rounded-lg" required>
+                <input type="tel" name="mobile" placeholder="Mobile Number" class="w-full border p-3 rounded-lg"
+                    required>
+                <input type="email" name="email" placeholder="Email Address" class="w-full border p-3 rounded-lg"
+                    required>
+                <textarea name="message" rows="4" placeholder="Your Message" class="w-full border p-3 rounded-lg"
+                    required></textarea>
+
+                <!-- Optional Hidden Fields -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Contact Message">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+                <button type="submit" class="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-gray-800 pt-10">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+            <div>
+                <h3 class="text-xl font-bold mb-3">Contact Us</h3>
+                <p>sujeetdandotiya@gmail.com</p>
+                <p>+91-6261745836</p>
+                <p>+91-6267652566</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-3">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#">School ERP</a></li>
+                    <li><a href="#">School Website</a></li>
+                    <li><a href="#">SMS Service</a></li>
+                    <li><a href="#">Hospital Automation</a></li>
+                    <li><a href="#">Optical Store Solution</a></li>
+                    <li><a href="#">Tour & Travels</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-3">Explore</h3>
+                <ul>
+                    <li><a href="#">School ERP In Gwalior</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center py-6 text-gray-400">
+            © Copyright SD SOFTECH. All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- FLOATING CONTACT ICONS -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+        <a href="tel:+916261745836" class="bg-green-500 p-3 rounded-full shadow-lg hover:scale-110 transition">
+            <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" class="w-6">
+        </a>
+        <a href="https://wa.me/916261745836" class="bg-green-600 p-3 rounded-full shadow-lg hover:scale-110 transition">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="w-6">
+        </a>
+        <a href="mailto:sujeetdandotiya@gmail.com"
+            class="bg-blue-500 p-3 rounded-full shadow-lg hover:scale-110 transition">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="w-6">
+        </a>
+        <a href="https://www.youtube.com/@mysteryoftrading_1" target="_blank"
+            class="bg-red-600 p-3 rounded-full shadow-lg hover:scale-110 transition">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="w-6">
+        </a>
+        <a href="https://www.linkedin.com/in/sujeet-dandotiya-41b73b3a7/" target="_blank"
+            class="bg-blue-700 p-3 rounded-full shadow-lg hover:scale-110 transition">
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" class="w-6">
+        </a>
+    </div>
+
+</body>
+
+</html>

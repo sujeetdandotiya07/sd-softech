@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Softech Header</title>
+    <style>
+        /* ================= HEADER ================= */
+        header {
+            width: 100%;
+            position: fixed;
+            /* Sticky header */
+            top: 0;
+            left: 0;
+            z-index: 999;
+            background-color: #6ee6d6;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 80px;
+            /* Header height */
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* Logo left, menu right */
+            align-items: center;
+            height: 100%;
+            /* Full header height */
+            padding: 0 40px;
+        }
+
+        /* Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            padding: 0 5px;
+            height: 100%;
+        }
+
+        .logo-container img {
+            max-height: 120%;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* Menu */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            font-size: 28px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+
+            nav {
+                justify-content: space-between;
+                /* logo left, hamburger right */
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #6ee6d6;
+                width: 100%;
+                position: absolute;
+                top: 80px;
+                /* Header height */
+                left: 0;
+                padding: 10px 0;
+            }
+
+            .menu li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="image/logo.png" alt="SD Softech Logo">
+            </div>
+
+            <!-- Menu -->
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="our_team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">&#9776;</button>
+        </nav>
+    </header>
+
+    <script>
+        // Mobile menu toggle
+        const mobileBtn = document.querySelector(".mobile-menu-btn");
+        const menu = document.querySelector(".menu");
+
+        mobileBtn.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

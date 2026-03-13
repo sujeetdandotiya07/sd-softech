@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Our Team</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <div id="header" class="fixed top-0 left-0 w-full z-50"></div>
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+
+    <!-- Page Content with padding top 32 and margin bottom 80 -->
+    <div class="pt-32 mb-80">
+
+        <h1 class="text-3xl font-bold text-center mb-10">Our Team</h1>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6 ">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white rounded-xl shadow-lg overflow-hidden text-center hover:scale-105 transition duration-300 texr-center">
+                <a href="https://example.com/rahul-sharma" target="_blank" rel="noopener noreferrer">
+                    <img class="w-full h-60 object-cover" src="image/sujeet.jpeg" alt="Rahul Sharma" />
+                </a>
+                <div class="p-5 mt-4">
+                    <h2 class="text-xl font-semibold text-gray-800">Sujeet Dandotiya</h2>
+                    <p class="text-gray-500">Web Developer</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+
+
+            <!-- Card 3 -->
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-gradient-to-r from-[#020b2c] to-[#071a4d] text-white py-12 px-6">
+        <div class="footer-container max-w-6xl mx-auto flex flex-wrap justify-between">
+
+            <!-- Contact Column -->
+            <div class="footer-column contact-info flex-1 min-w-[250px] mb-8">
+                <h3 class="mb-4 text-lg font-semibold">Contact Us</h3>
+                <p class="mb-2"><i class="fas fa-envelope"></i> sujeetdandotiya@gmail.com</p>
+                <p class="mb-2"><i class="fas fa-phone"></i> +91-6261745836</p>
+                <p class="mb-2"><i class="fas fa-phone"></i> +91-6267652566</p>
+                <div class="social-icons flex space-x-3 mt-3">
+                    <a href="#" class="text-white hover:text-blue-500"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" class="text-white hover:text-blue-500"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" class="text-white hover:text-blue-500"><i class="fab fa-youtube-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column flex-1 min-w-[250px] mb-8">
+                <h3 class="mb-4 text-lg font-semibold">Quick Links</h3>
+                <ul>
+                    <li class="mb-2"><a href="#">School ERP</a></li>
+                    <li class="mb-2"><a href="#">School Website</a></li>
+                    <li class="mb-2"><a href="#">SMS Service</a></li>
+                    <li class="mb-2"><a href="#">Hospital Automation</a></li>
+                    <li class="mb-2"><a href="#">Optical Store Solution</a></li>
+                    <li class="mb-2"><a href="#">Tour & Travels</a></li>
+                    <li class="mb-2"><a href="#">Our Clients</a></li>
+                    <li class="mb-2"><a href="#">Our Teams</a></li>
+                </ul>
+            </div>
+
+            <!-- Explore Column -->
+            <div class="footer-column flex-1 min-w-[250px] mb-8">
+                <h3 class="mb-4 text-lg font-semibold">Explore</h3>
+                <ul>
+                    <li><a href="#">School ERP In Gwalior</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Visit Count -->
+        <div class="visit text-center mt-6">
+            Visit Count: <span id="visitCount" class="font-bold text-blue-500 text-2xl">0</span>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom text-center mt-6 border-t border-white/20 pt-3">
+            © Copyright SD SOFTECH. All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- Visit Count Script -->
+    <script>
+        // Get visit count from localStorage
+        let visits = localStorage.getItem('visits');
+        if (!visits) visits = 0;
+        visits = parseInt(visits) + 1;
+        localStorage.setItem('visits', visits);
+
+        // Display visit count
+        document.getElementById('visitCount').innerText = visits;
+    </script>
+</body>
+
+</html>

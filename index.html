@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SD SOFTECH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo-container"><img src="image/logo.png" alt=""></div>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="our_team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="home-image"><img src="image/home.jpg" alt=""></div>
+        <div class="hero-content">
+            <h1>Connecting Communities with CS Systems</h1>
+            <p>Hardware Support, IT Support, and Network Solutions.</p>
+            <button>Our Services</button>
+        </div>
+    </section>
+
+    <!-- WHO WE ARE -->
+    <section class="who-we-are">
+        <h2>WHO WE ARE</h2>
+        <p>
+            SD Softech is software development company that provides solution for
+            School ERP, School Website, SMS services, Hospital Automation, Web applications,
+            Online store, Android application, PHP, Wordpress Application and other customized solutions.
+            We deliver solutions that not only meet your needs but also exceed your expectations.
+        </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <h2>LET'S GET IN TOUCH!</h2>
+        <p>
+            Ready to start your next project with us? That's great!
+            Give us a call or send us an email and we will get back to you
+            as soon as possible!
+        </p>
+        <a href="contact.html" class="contact-btn">Contact Us</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Contact Column -->
+            <div class="footer-column contact-info">
+                <h3>Contact Us</h3>
+                <p>sujeetdandotiya@gmail.com</p>
+                <p>+91-6261745836</p>
+                <p>+91-6267652566</p>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">School ERP</a></li>
+                    <li><a href="#">School Website</a></li>
+                    <li><a href="#">SMS Service</a></li>
+                    <li><a href="#">Hospital Automation</a></li>
+                    <li><a href="#">Optical Store Solution</a></li>
+                    <li><a href="#">Tour & Travels</a></li>
+                    <li><a href="#">Our Clients</a></li>
+                    <li><a href="#">Our Teams</a></li>
+                </ul>
+            </div>
+
+            <!-- Explore Column -->
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#">School ERP In Gwalior</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Visit Count Centered -->
+        <div style="text-align:center; margin:20px 0; font-weight:bold; font-size:24px; color:#2563EB;">
+            Visit Count: <span id="visitCount">0</span>
+        </div>
+
+        <div class="footer-bottom">
+            © Copyright SD SOFTECH. All Rights Reserved
+        </div>
+
+        <!-- Visit Count Script -->
+        <script>
+            // Get visit count from localStorage
+            let visits = localStorage.getItem('visits');
+            if (!visits) visits = 0;
+            visits = parseInt(visits) + 1;
+            localStorage.setItem('visits', visits);
+
+            // Display visit count
+            document.getElementById('visitCount').innerText = visits;
+        </script>
+    </footer>
+
+</body>
+
+</html>
